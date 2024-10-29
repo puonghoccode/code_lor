@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: Comic Sans MS, sans-serif;
+    background: radial-gradient(circle at bottom, #0d1b2a, #1b263b, #0b0c10);
+    color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Starry Sky Animation */
+#star-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 730px;
+    z-index: 0;
+}
+
+/* Password Screen */
+#password-screen {
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    height: 730px;
+    width: 30%;
+    color: #f6a53e;
+    z-index: 1; 
+    background: #ffffff;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.notes-password {
+    color: #f7cd7a;
+}
+
+/* Input fields */
+input {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #f7cd7a;
+    color: #f6a53e;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    background-color: #f7cd7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f6a53e;
+}
+
+
+/* Birthday Card */
+#card-screen {
+    margin-top: 15%;
+    z-index: 1; /* Above stars */
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 0 auto;
+    background: #273c75;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-page {
+    width: 100%;
+    height: 100%;
+    background-color: #192a56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    position: absolute;
+    border: 2px solid #f5f6fa;
+    font-size: 24px;
+    color: #f5f6fa;
+    cursor: pointer;
+    transition: transform 0.8s;
+    border-radius: 8px;
+}
+
+.card-page.back {
+    transform: rotateY(180deg);
+    background-color: #273c75;
+    color: #e1b12c;
+}
+
+.card:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0);
+}
