@@ -13,11 +13,11 @@ submitPassword.addEventListener("click", () => {
     const enteredPassword = parseInt(passwordInput.value, 10);  // Parse password input as an integer
 
     if (enteredPassword === CORRECT_PASSWORD) {
-        // If password is correct, navigate to flower.html
-        window.location.href = "flower.html";
+        // If password is correct, navigate to bcard.html
+        window.location.href = "bcard.html";
     } else {
         // Display error message if the password is incorrect
-        errorMessage.textContent = "Có chừng đấy cũng không nhập được =((";
+        errorMessage.textContent = "Có chừng đấy cũng không nhập được =((((";
     }
 });
 
@@ -26,16 +26,15 @@ passwordInput.addEventListener("input", () => {
     errorMessage.textContent = "";  // Clear error message on new input
 });
 
-// Show Birthday Card (Button logic in flower.html)
-// Check if show-card button exists (only available on flower.html)
+// Show Birthday Card (Button logic in bcard.html)
 const showCardButton = document.getElementById("show-card");
 if (showCardButton) {
     showCardButton.addEventListener("click", () => {
-        // Ensure flowerScreen and cardScreen are defined before using
-        const flowerScreen = document.getElementById("flower-screen");
-        if (flowerScreen && cardScreen) {
-            flowerScreen.classList.add("hidden");   // Hide flower screen
-            cardScreen.classList.remove("hidden");  // Show card screen
+        // Ensure cardScreen is defined before using
+        if (cardScreen) {
+            cardScreen.classList.remove("hidden");   // Show card screen
         }
     });
 }
+
+
