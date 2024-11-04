@@ -19,6 +19,37 @@ body {
   overflow: hidden;
   perspective: 1000px;
   padding: 50px 0px;
+  animation: moveLeft 1s forwards;
+  animation-delay: 7s;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.poetry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-family: cursive;
+  top: 50%;
+  right: -10%; /* Position the poetry 10% from the right */
+  transform: translateY(-50%);
+  color: white;
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.poetry.visible {
+  opacity: 1; /* Fade in effect */
 }
 
 .night {
@@ -29,33 +60,6 @@ body {
   width: 100%;
   height: 100%;
   filter: blur(0.1vmin);
-}
-
-/* Optional button styling */
-#nextButton {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        #nextButton.show {
-            display: block;
-            opacity: 1;
-        }
-
-.next-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s;
-}
-
-.next-button:hover {
-    background-color: #45a049; /* Darker green on hover */
 }
 
 /* flower styling */
@@ -1012,25 +1016,6 @@ body {
 }
 .not-loaded * {
   animation-play-state: paused !important;
-}
-
-/* next Button */
-#nextButton {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #8bceff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2em;
-  transition: background-color 0.3s;
-}
-
-#nextButton:hover {
-  background-color: #5ab9ff;
 }
 
 /*# sourceMappingURL=style.css.map */
