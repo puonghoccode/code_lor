@@ -1,8 +1,8 @@
 /* General Styles */
 body {
-    font-family: Comic Sans MS, sans-serif;
+    font-family: cursive;
     background: radial-gradient(circle at bottom, #0d1b2a, #1b263b, #0b0c10);
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     height: 100vh;
     margin: 0;
@@ -23,7 +23,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 730px;
+    height: 100vh;
     z-index: 0;
 }
 
@@ -32,7 +32,7 @@ body {
     position: absolute; 
     right: 0; 
     top: 0; 
-    height: 730px;
+    height: 100vh;
     width: 30%;
     color: #f6a53e;
     z-index: 1; 
@@ -41,6 +41,8 @@ body {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .notes-password {
@@ -77,51 +79,4 @@ button {
 
 button:hover {
     background-color: #f6a53e;
-}
-
-
-/* Birthday Card */
-#card-screen {
-    margin-top: 15%;
-    z-index: 1; /* Above stars */
-}
-
-.card {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-    margin: 0 auto;
-    background: #273c75;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.card-page {
-    width: 100%;
-    height: 100%;
-    background-color: #192a56;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backface-visibility: hidden;
-    position: absolute;
-    border: 2px solid #f5f6fa;
-    font-size: 24px;
-    color: #f5f6fa;
-    cursor: pointer;
-    transition: transform 0.8s;
-    border-radius: 8px;
-}
-
-.card-page.back {
-    transform: rotateY(180deg);
-    background-color: #273c75;
-    color: #e1b12c;
-}
-
-.card:hover .front {
-    transform: rotateY(-180deg);
-}
-
-.card:hover .back {
-    transform: rotateY(0);
 }
